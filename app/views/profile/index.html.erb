@@ -1,0 +1,27 @@
+ <%=(render 'layouts/menu') %>
+ 
+
+<div class="container1 fadeIn">
+
+<%  @user.playlists.reverse.each do |index|%>
+<div class='ui card' style="width:28%; margin:2%;box-shadow: 0 0 11px black;">
+    <div class="video-responsive">
+      <iframe allowfullscreen width="420" height="315" src="<%=index.url_show%>">
+      </iframe>
+    </div>
+    <div class='content'>
+
+      <div class='extra content'>
+         <a class='ui red inverted button'href="<%=mp4_path(url_param: index.url)%>">mp4</a> 
+         <a class='ui red inverted button' href="<%=mp3_path(url_param: index.url)%>"  >mp3</a> 
+       
+         <a class='ui red inverted button' href="<%= delete_path(id: index.id)%>" >delete</a> 
+        
+      </div>
+    </div>
+  </div>
+
+<%end%>
+</div>
+ 
+ 
