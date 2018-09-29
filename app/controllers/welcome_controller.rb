@@ -11,9 +11,10 @@ class WelcomeController < ApplicationController
     require 'nokogiri'
     require 'open-uri'
     url       = 'http://youtube.com/results?search_query='
-    
-    page = Nokogiri::HTML(open(url + params[:query])) 
-     
+    url_text = Net::HTTP.get(URI.parse "#{url}#{params[:query]}")
+    page = Nokogiri::XML(url_text)
+    # page = Nokogiri::HTML(open(url + params[:query])) 
+     p page
     # p doc.xpath('//div[@class="heat"]/a').map { |link| link['href'] }
     arr = []
     attr = page.xpath('//a[contains(@href, "watch?")]')
