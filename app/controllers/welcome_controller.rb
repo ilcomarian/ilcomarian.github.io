@@ -45,7 +45,7 @@ class WelcomeController < ApplicationController
       next unless i.even?
    
       str = arr[i]
-      str = str.attribute('href')
+      
       puts arr[i]
     
       $file.push(str)
