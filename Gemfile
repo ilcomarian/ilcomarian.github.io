@@ -4,7 +4,7 @@ ruby '2.5.1'
 gem 'ytsongdw'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
-gem 'youtube-dl.rb'
+gem 'youtube-dl.rb', :git => 'https://github.com/ilcomarian/dl.rb.git'
 # gem "selenium-webdriver"
 # gem "chromedriver-helper"
 gem 'nokogiri'

@@ -7,19 +7,19 @@ class ShowController < ApplicationController
   def mp4
     file = YoutubeDL.download params[:url_param]
     
-    str= file.filename
-    if str.match(/.mp4/) != nil
-      str = str.split('.mp4')
-      str.push('.mkv')
-      str = str.join()
-    end
-    name = file.filename
-    name = name.split('-')
-    name = name[0] + name[1]
+    # str= file.filename
+    # if str.match(/.mp4/) != nil
+    #   str = str.split('.mp4')
+    #   str.push('.mkv')
+    #   str = str.join()
+    # end
+    # name = file.filename
+    # name = name.split('-')
+    # name = name[0] + name[1]
 
-    send_data(File.read(str),:filename => file.filename)
+    # send_data(File.read(str),:filename => file.filename)
   
-    File.delete(str)     
+    # File.delete(str)     
    
   end
 
@@ -34,18 +34,18 @@ class ShowController < ApplicationController
     
     file =  YoutubeDL.download  params[:url_param], options
    
-    str= file.filename
-    if str.match(/.webm/) != nil
-    str = str.split('.webm')
-    str.push('.mp3')
-    str = str.join()
-    end
-    name = file.filename
-    name = name.split('-')
-    name = name[0] + name[1]
-    send_data(File.read(str),:filename => name) 
-    File.delete(str)   
- 
+    # str= file.filename
+    # if str.match(/.webm/) != nil
+    # str = str.split('.webm')
+    # str.push('.mp3')
+    # str = str.join()
+    # end
+    # name = file.filename
+    # name = name.split('-')
+    # name = name[0] + name[1]
+    # send_data(File.read(str),:filename => name) 
+    # File.delete(str)   
+    redirect_to:show_index
   end
   
   def create
