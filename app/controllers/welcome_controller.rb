@@ -41,7 +41,7 @@ class WelcomeController < ApplicationController
      # driver.quit
     $video_url = []
     $file = []
-    (0..34).each do |i|
+    (0..24).each do |i|
       next unless i.even?
    
       str = arr[i]
