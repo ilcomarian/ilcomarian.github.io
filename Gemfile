@@ -5,8 +5,8 @@ gem 'ytsongdw'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
 gem 'youtube-dl.rb'
-gem "selenium-webdriver"
-gem "chromedriver-helper"
+# gem "selenium-webdriver"
+# gem "chromedriver-helper"
 gem 'nokogiri'
  
 gem 'geckodriver-helper'
