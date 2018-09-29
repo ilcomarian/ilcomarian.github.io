@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     # Dennis Lloyd - NEVERMIND
     require 'nokogiri'
     require 'open-uri'
-    url       = 'http://youtube.com/results?search_query='
+    url       = 'https://youtube.com/results?search_query='
 
     # url_text = Net::HTTP.get(url + params[:query])
     # page = Nokogiri::XML(url_text)
@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
     # p doc.xpath('//div[@class="heat"]/a').map { |link| link['href'] }
     arr = []
     attr = page.xpath('//a[contains(@href, "watch?")]')
-    attr.map {|element| arr.push('http://youtube.com' + element["href"])}
+    attr.map {|element| arr.push('https://youtube.com' + element["href"])}
     
     # options = Selenium::WebDriver::Chrome::Options.new
     
