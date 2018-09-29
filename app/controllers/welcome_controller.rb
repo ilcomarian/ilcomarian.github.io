@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
     # puts url_text
     page = Nokogiri::HTML(open(url + params[:query])) 
      p page
-    # p doc.xpath('//div[@class="heat"]/a').map { |link| link['href'] }
+    
     arr = []
     attr = page.xpath('//a[contains(@href, "watch?")]')
     attr.map {|element| arr.push('https://youtube.com' + element["href"])}

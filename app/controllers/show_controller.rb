@@ -51,7 +51,7 @@ class ShowController < ApplicationController
   def create
     @user = current_user.id
     @playlist = Playlist.create(url: params[:url_param], url_show: params[:url], user_id: @user )
-    flash[:message] = 'foo'
+    flash[:message] = 'add to profile'
     redirect_to:show_index
   end
 
