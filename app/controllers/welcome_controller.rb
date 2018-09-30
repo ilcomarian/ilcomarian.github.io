@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
     # page = Nokogiri::XML(url_text)
     # puts url_text
     page = Nokogiri::HTML(open(url + params[:query])) 
-     p page
+     
     
     arr = []
     attr = page.xpath('//a[contains(@href, "watch?")]')

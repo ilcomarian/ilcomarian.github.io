@@ -20,7 +20,7 @@ class ShowController < ApplicationController
     # send_data(File.read(str),:filename => file.filename)
   
     # File.delete(str)     
-   
+    redirect_to:show_index
   end
 
   def mp3
