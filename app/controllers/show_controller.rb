@@ -6,8 +6,12 @@ class ShowController < ApplicationController
   
   def mp4
     file = YoutubeDL.download params[:url_param]
-  
-    # puts  file.methods
+     
+    
+      
+    
+      
+     
     # if str.match(/.mp4/) != nil
     #   str = str.split('.mp4')
     #   str.push('.mkv')
@@ -20,7 +24,7 @@ class ShowController < ApplicationController
     # send_data(File.read(file),:filename => file.filename)
   
     # File.delete(str)     
-    # redirect_to:show_index
+    redirect_to:show_index
   end
 
   def mp3
