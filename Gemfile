@@ -8,14 +8,11 @@ gem 'youtube-dl.rb', :git => 'https://github.com/ilcomarian/dl.rb.git'
 # gem "selenium-webdriver"
 # gem "chromedriver-helper"
 gem 'nokogiri'
- 
 gem 'geckodriver-helper'
- 
 gem 'rabl-rails'
 gem 'bcrypt'
 gem 'devise'
 gem "flash-message-conductor", "~> 2.0.1"
- 
 gem "slack-notifier"
  
 gem "rake"
